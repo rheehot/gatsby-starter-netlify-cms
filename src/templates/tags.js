@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 
 class TagRoute extends React.Component {
   render() {
+    console.log('props : ', this.props)
     const posts = this.props.data.allMarkdownRemark.edges
     const postLinks = posts.map(post => (
       <li key={post.node.fields.slug}>
@@ -12,13 +13,13 @@ class TagRoute extends React.Component {
           <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
         </Link>
       </li>
-    ))
-    const tag = this.props.pageContext.tag
-    const title = this.props.data.site.siteMetadata.title
-    const totalCount = this.props.data.allMarkdownRemark.totalCount
+    ));
+    const tag = this.props.pageContext.tag;
+    const title = this.props.data.site.siteMetadata.title;
+    const totalCount = this.props.data.allMarkdownRemark.totalCount;
     const tagHeader = `${totalCount} post${
       totalCount === 1 ? '' : 's'
-    } tagged with “${tag}”`
+    } tagged with “${tag}”`;
 
     return (
       <Layout>
@@ -56,7 +57,7 @@ export const tagPageQuery = graphql`
     allMarkdownRemark(
       limit: 1000
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: { frontmatter: { faq_tags: { in: [$tag] } } }
     ) {
       totalCount
       edges {

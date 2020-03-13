@@ -1,12 +1,53 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import { Helmet } from 'react-helmet'
 import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Navbar2 from '../components/Navbar2'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import hero_background from "../static/hero-background.png";
+
+const HeroContent = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+  @media (max-width: 800px) {
+        flex-direction: column;
+        padding-left: 26px;
+        padding-right: 26px;
+        margin-top: 35px;
+  }
+`;
+
+const HeroContentWrapper= styled.div`
+  margin-top: 38px;
+  margin-left: 37px;
+  font-family: NotoSansCJKkr;
+  font-size: 27px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: 0.29px;
+  text-align: center;
+  color: #ffffff;
+  @media (max-width: 800px) {
+        order: 1;
+        font-size: 18px;
+        margin-left: 0px;
+  }
+`;
+
 
 const TemplateWrapper = ({ children }) => {
+
+  const HeroContents = (
+    <HeroContentWrapper>
+      ㅇ러ㅣㅏㅇㄴ러이ㅏ렁니ㅏ렁니ㅏ렁니ㅏ러라ㅣ어ㅏㅣ렁ㄴ라ㅣㅇㄴ러아렁니라ㅓ
+    </HeroContentWrapper>
+  );
+
   const { title, description } = useSiteMetadata()
   return (
     <div>
@@ -23,13 +64,13 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/favicon-32x32.png`}
+          href={`${withPrefix('/')}img/favicon.ico`}
           sizes="32x32"
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix('/')}img/favicon-16x16.png`}
+          href={`${withPrefix('/')}img/favicon.ico`}
           sizes="16x16"
         />
 
@@ -48,7 +89,23 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <Navbar />
+
+      <div
+        className="full-width-image margin-top-0"
+        style={{
+          backgroundImage: `url(${hero_background})`,
+          backgroundSize: `cover`,
+          backgroundPosition: `50% 50%`,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'flex-start',
+        }}
+      >
+        <Navbar2 />
+        <HeroContent>
+          {HeroContents}
+        </HeroContent>
+      </div>
       <div>{children}</div>
       <Footer />
     </div>
