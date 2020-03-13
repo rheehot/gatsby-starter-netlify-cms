@@ -106,7 +106,6 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
-                featuredpost
                 platform
                 faq_tags
               }
