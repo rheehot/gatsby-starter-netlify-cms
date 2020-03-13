@@ -44,11 +44,12 @@ const TemplateWrapper = ({ children }) => {
 
   const HeroContents = (
     <HeroContentWrapper>
-      ㅇ러ㅣㅏㅇㄴ러이ㅏ렁니ㅏ렁니ㅏ렁니ㅏ러라ㅣ어ㅏㅣ렁ㄴ라ㅣㅇㄴ러아렁니라ㅓ
+      당신이 원하는 인터넷
     </HeroContentWrapper>
   );
 
-  const { title, description } = useSiteMetadata()
+  const { title, description } = useSiteMetadata();
+  
   return (
     <div>
       <Helmet>
