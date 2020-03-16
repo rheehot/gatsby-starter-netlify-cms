@@ -13,7 +13,7 @@ const Title = styled.div`
   font-size: 30px;
   font-weight: bold;
   color: #6529E7;
-  text-align: center;
+  text-align: left;
 `;
 
 export const Block = styled.div`
