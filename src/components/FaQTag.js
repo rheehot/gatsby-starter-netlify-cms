@@ -20,16 +20,17 @@ const FaQSection = styled.div`
 `;
 
 const SectionTitle = styled.div`
-  color: #6529E7;
+  color: #2f2e30;
 `;
 
 const SectionItem = styled.div`
-  width: 250px;
+  width: 450px;
   font-size: 13px;
   font-weight: normal;
   font-style: normal;
   margin-top: 10px;
   margin-bottom: 10px;
+  color: #2f2e30;
 `;
 
 class FaQTag extends React.Component {
