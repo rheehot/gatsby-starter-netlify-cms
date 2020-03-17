@@ -22,15 +22,16 @@ const HeroContent = styled.div`
 
 const HeroContentWrapper= styled.div`
   margin-top: 38px;
-  margin-left: 37px;
+  margin-left: 155px;
   font-family: NotoSansCJKkr;
-  font-size: 27px;
+  font-size: 45px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: 0.29px;
-  text-align: center;
+  text-align: left;
+  width: 100%;
   color: #ffffff;
   @media (max-width: 800px) {
         order: 1;
@@ -44,12 +45,12 @@ const TemplateWrapper = ({ children }) => {
 
   const HeroContents = (
     <HeroContentWrapper>
-      당신이 원하는 인터넷
+      자주 묻는 질문
     </HeroContentWrapper>
   );
 
   const { title, description } = useSiteMetadata();
-  
+
   return (
     <div>
       <Helmet>
@@ -96,7 +97,7 @@ const TemplateWrapper = ({ children }) => {
         style={{
           backgroundImage: `url(${hero_background})`,
           backgroundSize: `cover`,
-          backgroundPosition: `50% 50%`,
+          // backgroundPosition: `50% 50%`,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-start',

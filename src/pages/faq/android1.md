@@ -3,10 +3,6 @@ templateKey: faq-content
 title: 광고 차단 기능은 어떻게쓰나요
 date: 2016-12-17T15:04:10.000Z
 description: 광고 차단 기능은 어떻게쓰나요
-tags:
-  - flavor
-  - tasting
-  - my-test-tag1
 faq_tags:
   - 광고 차단
 platform: ios

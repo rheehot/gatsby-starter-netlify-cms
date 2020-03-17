@@ -8,7 +8,7 @@ import { AppStoreIcon, PlayStoreIcon, PcIcon } from "./Icon";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
 `;
 
@@ -17,7 +17,7 @@ const FaQSection = styled.div`
   font-weight: bold;
   font-style: normal;
   margin: 10px;
-  text-align: center;
+  text-align: left;
 `;
 
 const SectionTitle = styled.div`
@@ -26,7 +26,7 @@ const SectionTitle = styled.div`
 
 const SectionItem = styled.div`
   width: 250px;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: normal;
   font-style: normal;
   margin-top: 10px;

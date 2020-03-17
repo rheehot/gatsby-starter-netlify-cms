@@ -18,6 +18,7 @@ const FaQSection = styled.div`
   margin: 10px;
   margin-top: 30px;
   text-align: left;
+  border-bottom: 1px solid #efefef;
 `;
 
 const SectionTitle = styled.div`
@@ -27,7 +28,7 @@ const SectionTitle = styled.div`
 
 const SectionItem = styled.div`
   width: 450px;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: normal;
   font-style: normal;
   margin-top: 10px;

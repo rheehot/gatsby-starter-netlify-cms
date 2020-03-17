@@ -12,6 +12,7 @@ const NavbarWrapper = styled.div`
   padding-left: 155px;
   padding-right: 165px;
   box-sizing: border-box;
+  position: absolute;
   @media (max-width: 800px) {
         padding-left: 20px;
         padding-right: 20px;

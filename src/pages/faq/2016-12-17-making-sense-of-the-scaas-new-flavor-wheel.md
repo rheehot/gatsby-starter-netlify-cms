@@ -3,10 +3,6 @@ templateKey: faq-content
 title: 안드로이드 패쳐는 어떻게 쓰는거임?
 date: 2016-12-17T15:04:10.000Z
 description: 안드로이드 패쳐는 어떻게 쓰는거임?
-tags:
-  - flavor
-  - tasting
-  - my-test-tag1
 faq_tags:
   - 유튜브 광고 차단
 platform: android
